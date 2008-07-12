@@ -16,4 +16,8 @@
 #
 #You can contact the author at wikipediankiba@gmail.com
 
-
+class Setup
+  def initialize
+    @screen = Screen.new([800,600],0,[Rubygame::HWSURFACE,Rubygame::DOUBLEBUF])
+  end
+end
