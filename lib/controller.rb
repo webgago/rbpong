@@ -16,8 +16,4 @@
 #
 #You can contact the author at wikipediankiba@gmail.com
 
-require "rubygems"
-require "rubygame"
-require "lib/controller.rb"
-include Rubygame
-TTF.setup
+
