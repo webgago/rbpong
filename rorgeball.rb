@@ -23,3 +23,5 @@ require "lib/setup.rb"
 include Rubygame
 #TTF.setup is necessary for using and manipulating texts and fonts.
 TTF.setup
+
+setup = Setup.new
