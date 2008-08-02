@@ -21,4 +21,8 @@ class Setup
     @screen = Screen.new([800,600],0,[Rubygame::HWSURFACE,Rubygame::DOUBLEBUF])
     @queue = Rubygame::EventQueue.new()
   end
+  def run
+    loop do
+    end
+  end
 end
