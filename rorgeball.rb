@@ -25,3 +25,4 @@ include Rubygame
 TTF.setup
 
 setup = Setup.new
+setup.run()
