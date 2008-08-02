@@ -23,6 +23,19 @@ class Setup
   end
   def run
     loop do
+      @queue.each do |ev|
+        case ev
+        when Rubygame::QuitEvent
+          Rubygame.quit()
+          exit
+        when Rubygame::KeyDownEvent
+          case ev.key
+          when Rubygame::K_ESCAPE
+            Rubygame.quit()
+            exit
+          end
+        end
+      end
     end
   end
 end
