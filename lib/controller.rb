@@ -16,4 +16,26 @@
 #
 #You can contact the author at wikipediankiba@gmail.com
 
-
+class Controller
+  def initialize screen
+    @screen = screen
+    @queue = Rubygame::EventQueue.new()
+  end
+  def run
+    loop do
+      @queue.each do |ev|
+        case ev
+        when Rubygame::QuitEvent
+          Rubygame.quit()
+          exit
+        when Rubygame::KeyDownEvent
+          case ev.key
+          when Rubygame::K_ESCAPE
+            Rubygame.quit()
+            exit
+          end
+        end
+      end
+    end
+  end
+end
