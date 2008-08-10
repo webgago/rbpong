@@ -20,6 +20,7 @@ class Controller
   def initialize screen
     @screen = screen
     @queue = Rubygame::EventQueue.new()
+    @clock = Rubygame::Clock.new()
   end
   def run
     loop do
