@@ -34,6 +34,8 @@ class Setup
           when Rubygame::K_ESCAPE
             Rubygame.quit()
             exit
+          when Rubygame::K_RETURN
+            @control.run()
           end
         end
       end
