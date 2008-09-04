@@ -21,8 +21,10 @@ class Controller
     @screen = screen
     @queue = Rubygame::EventQueue.new()
     @clock = Rubygame::Clock.new()
+    @clock.target_framerate = 30
   end
   def run
+    @clock.tick()
     loop do
       @queue.each do |ev|
         case ev
