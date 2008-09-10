@@ -23,8 +23,10 @@ class Controller
     @clock = Rubygame::Clock.new()
     @clock.target_framerate = 30
   end
+  def fps_update
+   @screen.title = "FPS: #{@clock.framerate()}"
+  end
   def run
-    @clock.tick()
     loop do
       @queue.each do |ev|
         case ev
@@ -39,6 +41,8 @@ class Controller
           end
         end
       end
+      fps_update()
+      @clock.tick()
     end
   end
 end
