@@ -30,6 +30,11 @@ class Setup
     }
     make_magic_hooks(quit_hooks)
   end
+  def hook_run
+    run_hook = {
+      :return => :run
+    }
+  end
   def run
     loop do
       @queue.each do |ev|
