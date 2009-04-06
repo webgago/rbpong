@@ -17,6 +17,7 @@
 #You can contact the author at wikipediankiba@gmail.com
 
 class Controller
+  include Rubygame::EventHandler::HasEventHandler
   def initialize screen
     @screen = screen
     @queue = Rubygame::EventQueue.new()
