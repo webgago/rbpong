@@ -35,6 +35,7 @@ class Controller
     make_magic_hooks(quit_hooks)
   end
   def run
+    hook_quit()
     loop do
       @queue.each do |ev|
         case ev
