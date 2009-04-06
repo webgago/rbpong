@@ -54,4 +54,8 @@ class Controller
       @clock.tick()
     end
   end
+  def quit
+    Rubygame.quit()
+    throw :quit
+  end
 end
