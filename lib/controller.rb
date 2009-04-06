@@ -27,6 +27,13 @@ class Controller
   def fps_update
    @screen.title = "FPS: #{@clock.framerate()}"
   end
+  def hook_quit
+    quit_hooks = {
+      :escape => :quit,
+      :q => :quit
+    }
+    make_magic_hooks(quit_hooks)
+  end
   def run
     loop do
       @queue.each do |ev|
