@@ -23,6 +23,13 @@ class Setup
     @queue = Rubygame::EventQueue.new()
     @control = Controller.new(@screen)
   end
+  def hook_quit
+    quit_hooks = {
+      :escape => :quit,
+      :q => :quit,
+    }
+    make_magic_hooks(quit_hooks)
+  end
   def run
     loop do
       @queue.each do |ev|
