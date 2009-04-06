@@ -34,6 +34,7 @@ class Setup
     run_hook = {
       :return => :run
     }
+    make_magic_hooks(run_hook)
   end
   def run
     loop do
