@@ -32,7 +32,7 @@ class Setup
   end
   def hook_run
     run_hook = {
-      :return => :run
+      :return => :execute
     }
     make_magic_hooks(run_hook)
   end
