@@ -36,6 +36,9 @@ class Setup
     }
     make_magic_hooks(run_hook)
   end
+  def execute
+    @control.run()
+  end
   def run
     hook_quit()
     loop do
