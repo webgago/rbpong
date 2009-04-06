@@ -17,6 +17,7 @@
 #You can contact the author at wikipediankiba@gmail.com
 
 class Setup
+  include Rubygame::EventHandler::HasEventHandler
   def initialize
     @screen = Screen.new([800,600],0,[Rubygame::HWSURFACE,Rubygame::DOUBLEBUF])
     @queue = Rubygame::EventQueue.new()
