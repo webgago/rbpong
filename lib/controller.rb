@@ -58,4 +58,10 @@ class Controller
     Rubygame.quit()
     throw :quit
   end
+  def queue_through
+    @queue.each do |event|
+      handle(event)
+    end
+  end
+
 end
