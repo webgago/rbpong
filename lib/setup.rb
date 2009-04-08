@@ -21,6 +21,7 @@ class Setup
   def initialize
     @screen = Screen.new([800,600],0,[Rubygame::HWSURFACE,Rubygame::DOUBLEBUF])
     @queue = Rubygame::EventQueue.new()
+    @queue.enable_new_style_events()
     @control = Controller.new(@screen)
   end
   def hook_quit
