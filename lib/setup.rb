@@ -43,21 +43,9 @@ class Setup
   def run
     hook_quit()
     hook_run()
-    loop do
-      @queue.each do |ev|
-        case ev
-        when Rubygame::QuitEvent
-          Rubygame.quit()
-          exit
-        when Rubygame::KeyDownEvent
-          case ev.key
-          when Rubygame::K_ESCAPE
-            Rubygame.quit()
-            exit
-          when Rubygame::K_RETURN
-            @control.run()
-          end
-        end
+    catch(:quit) do
+      loop do
+        queue_through()
       end
     end
   end
