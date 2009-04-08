@@ -42,6 +42,7 @@ class Setup
   end
   def run
     hook_quit()
+    hook_run()
     loop do
       @queue.each do |ev|
         case ev
