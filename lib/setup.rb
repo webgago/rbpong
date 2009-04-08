@@ -61,4 +61,9 @@ class Setup
       end
     end
   end
+  def queue_through
+    @queue.each do |event|
+      handle(event)
+    end
+  end
 end
