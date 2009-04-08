@@ -38,19 +38,7 @@ class Controller
   def run
     hook_quit()
     loop do
-      @queue.each do |ev|
-        case ev
-        when Rubygame::QuitEvent
-          Rubygame.quit()
-          exit
-        when Rubygame::KeyDownEvent
-          case ev.key
-          when Rubygame::K_ESCAPE
-            Rubygame.quit()
-            exit
-          end
-        end
-      end
+      queue_through()
       fps_update()
       @clock.tick()
     end
