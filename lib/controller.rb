@@ -21,6 +21,7 @@ class Controller
   def initialize screen
     @screen = screen
     @queue = Rubygame::EventQueue.new()
+    @queue.enable_new_style_events()
     @clock = Rubygame::Clock.new()
     @clock.target_framerate = 30
   end
