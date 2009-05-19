@@ -51,7 +51,7 @@ class Setup
   end
   def quit
     Rubygame.quit()
-    throw(:quit)
+    exit
   end
   def queue_through
     @queue.each do |event|
