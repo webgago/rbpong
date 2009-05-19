@@ -43,19 +43,14 @@ class Setup
   def run
     hook_quit()
     hook_run()
-    catch(:quit) do
-      loop do
-        queue_through()
+    loop do
+      @queue.each do |event|
+        handle(event)
       end
     end
   end
   def quit
     Rubygame.quit()
     exit
-  end
-  def queue_through
-    @queue.each do |event|
-      handle(event)
-    end
   end
 end
