@@ -27,7 +27,7 @@ class Setup
   def hook_quit
     quit_hooks = {
       :escape => :quit,
-      Rubygame::Events::QuitRequested => :quit,
+      Rubygame::Events::QuitRequested => :quit
     }
     make_magic_hooks(quit_hooks)
   end
