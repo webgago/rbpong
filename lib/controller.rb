@@ -38,7 +38,9 @@ class Controller
   def run
     hook_quit()
     loop do
-      queue_through()
+      @queue.each do |event|
+        handle(event)
+      end
       fps_update()
       @clock.tick()
     end
@@ -47,10 +49,4 @@ class Controller
     Rubygame.quit()
     exit
   end
-  def queue_through
-    @queue.each do |event|
-      handle(event)
-    end
-  end
-
 end
