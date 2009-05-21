@@ -24,6 +24,7 @@ class Controller
     @queue.enable_new_style_events()
     @clock = Rubygame::Clock.new()
     @clock.target_framerate = 30
+    @background = Surface.load("data/playfield.png")
   end
   def fps_update
    @screen.title = "FPS: #{@clock.framerate()}"
