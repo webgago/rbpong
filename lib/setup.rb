@@ -7,6 +7,7 @@ class Setup
     @queue = Rubygame::EventQueue.new()
     @queue.enable_new_style_events()
     @control = Controller.new(@screen)
+    @background = Rubygame::Surface.load("data/titlescreen.png")
   end
   def hook_quit
     quit_hooks = {
