@@ -44,6 +44,7 @@ class Controller
       end
       fps_update()
       draw()
+      @screen.flip()
       @clock.tick()
     end
   end
