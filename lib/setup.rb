@@ -32,6 +32,7 @@ class Setup
       @queue.each do |event|
         handle(event)
       end
+      draw()
     end
   end
   def quit
