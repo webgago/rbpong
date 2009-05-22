@@ -38,4 +38,7 @@ class Setup
     Rubygame.quit()
     exit
   end
+  def draw
+    @background.blit(@screen,[0,0])
+  end
 end
