@@ -32,6 +32,7 @@ class Setup
       @queue.each do |event|
         handle(event)
       end
+      @screen.flip()
       draw()
     end
   end
