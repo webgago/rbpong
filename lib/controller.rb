@@ -43,6 +43,7 @@ class Controller
         handle(event)
       end
       fps_update()
+      draw()
       @clock.tick()
     end
   end
