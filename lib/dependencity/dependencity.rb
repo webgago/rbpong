@@ -13,4 +13,7 @@ class Dependencity
   def add_dir name
     @directories << name
   end
+  def add_rule name
+    @patterns << name
+  end
 end
