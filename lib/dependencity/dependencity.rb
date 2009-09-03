@@ -41,4 +41,9 @@ class Dependencity
       puts"Loaded file: #{file}"
     end
   end
+  def load_directory directory
+    files = get_files(directory)
+    files = process_rules(file)
+    require_all(files)
+  end
 end
