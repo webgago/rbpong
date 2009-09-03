@@ -10,4 +10,7 @@ class Dependencity
   def ignore name
     @ignore_list << name
   end
+  def add_dir name
+    @directories << name
+  end
 end
