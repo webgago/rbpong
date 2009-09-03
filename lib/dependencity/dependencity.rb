@@ -35,4 +35,10 @@ class Dependencity
     end
     return files
   end
+  def require_all
+    files.each do |file|
+      require file
+      puts"Loaded file: #{file}"
+    end
+  end
 end
