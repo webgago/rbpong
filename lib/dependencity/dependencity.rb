@@ -16,4 +16,9 @@ class Dependencity
   def add_rule name
     @patterns << name
   end
+  def move_to_front value
+    filename = @files[value]
+    @files.pop_at(value)
+    file.unshift(filename)
+  end
 end
