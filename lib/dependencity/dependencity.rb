@@ -7,4 +7,7 @@ class Dependencity
     @ignore_list = Array.new()
     @patterns = Array.new()
   end
+  def ignore name
+    @ignore_list << name
+  end
 end
