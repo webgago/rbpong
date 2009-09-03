@@ -46,4 +46,9 @@ class Dependencity
     files = process_rules(file)
     require_all(files)
   end
+  def process_directories
+    @directories.each do |directory|
+      load_directory(directory)
+    end
+  end
 end
