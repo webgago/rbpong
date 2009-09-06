@@ -26,7 +26,7 @@ class Dependencity
     file.unshift(filename)
   end
   def process_rules files
-    go_down = @rules.length()
+    go_down = @patterns.length()
     go_down.times do |rule|
       counter = 0
       files.each do |file|
