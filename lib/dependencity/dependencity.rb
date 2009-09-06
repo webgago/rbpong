@@ -47,7 +47,7 @@ class Dependencity
   end
   def load_directory directory
     files = get_files(directory)
-    files = process_rules(file)
+    files = process_rules(files)
     require_all(files)
   end
   def process_directories
