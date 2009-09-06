@@ -16,6 +16,10 @@ class Dependencity
   def add_rule name
     @patterns << name
   end
+  def get_files directory
+    files = Dir.glob( directory + "/" + File.join("**","*.rb")).sort()
+    return files
+  end
   def move_to_front value
     filename = @files[value]
     @files.pop_at(value)
