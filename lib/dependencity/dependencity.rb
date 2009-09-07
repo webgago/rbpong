@@ -2,7 +2,6 @@
 class Dependencity
   attr_reader :directories
   def initialize
-    @files = Array.new()
     @directories = Array.new()
     @ignore_list = Array.new()
     @patterns = Array.new()
@@ -20,10 +19,10 @@ class Dependencity
     files = Dir.glob( directory + "/" + File.join("**","*.rb")).sort()
     return files
   end
-  def move_to_front value
-    filename = @files[value]
-    @files.delete_at(value)
-    @files.unshift(filename)
+  def move_to_front files , value
+    filename = files[value]
+    files.unshift(filename)
+    files.delete_at(value)
   end
   def process_rules files
     go_down = @patterns.length()
@@ -32,7 +31,7 @@ class Dependencity
       counter = 0
       files.each do |file|
         if file.match(@patterns[step])
-          move_to_front(counter)
+          files = move_to_front(files,counter)
         end
         counter += 1
       end
