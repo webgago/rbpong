@@ -39,7 +39,7 @@ class Dependencity
     end
     return files
   end
-  def require_all
+  def require_all files
     files.each do |file|
       require file
       puts"Loaded file: #{file}"
