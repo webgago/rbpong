@@ -22,8 +22,8 @@ class Dependencity
   end
   def move_to_front value
     filename = @files[value]
-    @files.pop_at(value)
-    file.unshift(filename)
+    @files.delete_at(value)
+    @files.unshift(filename)
   end
   def process_rules files
     go_down = @patterns.length()
