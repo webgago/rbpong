@@ -27,15 +27,16 @@ class Dependencity
   end
   def process_rules files
     go_down = @patterns.length()
+    step = @patterns.length() -1
     go_down.times do |rule|
       counter = 0
       files.each do |file|
-        if file.match(@patterns[go_down])
+        if file.match(@patterns[step])
           move_to_front(counter)
         end
         counter += 1
       end
-      go_down -= 1
+      step -= 1
     end
     return files
   end
