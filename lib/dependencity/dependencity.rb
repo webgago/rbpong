@@ -30,7 +30,7 @@ class Dependencity
     go_down.times do |rule|
       counter = 0
       files.each do |file|
-        if file.match(@rules[go_down])
+        if file.match(@patterns[go_down])
           move_to_front(counter)
         end
         counter += 1
