@@ -7,5 +7,5 @@ TTF.setup()
 
 loader = Dependencity.new()
 loader.add_rule("top")
-loader.add_dir("lib/event.rb")
+loader.add_dir("lib/events")
 loader.process_directories()
