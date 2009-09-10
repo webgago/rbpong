@@ -42,8 +42,16 @@ class Dependencity
   end
   def require_all files
     files.each do |file|
-      require file
-      puts"Loaded file: #{file}"
+      action = true
+      @ignore_list.each do |ignore|
+        if file == ignore
+          action = false
+        end
+      end
+      if action == true
+        require file
+        puts"Loaded file: #{file}"
+      end
     end
   end
   def load_directory directory
