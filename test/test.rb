@@ -1,4 +1,10 @@
 require"config/environment.rb"
 loader = Dependencity.new()
-loader.add_dir("events")
+def all
+  loader.add_dir("events")
+end
+
+def load name
+  load.dir(name)
+end
 loader.process_directories()
