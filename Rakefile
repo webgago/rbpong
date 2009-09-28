@@ -4,7 +4,7 @@ task :test , [:load_dir] do |t,args|
   if args.load_dir == "all"
     all()
   else
-    load_dir(args.load_dir)
+    load(args.load_dir)
   end
 end
   
