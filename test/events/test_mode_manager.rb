@@ -1,4 +1,4 @@
-class TestModeManager < Test::Unit::TestCases
+class TestModeManager < Test::Unit::TestCase
   def setup
     @manager = ModesManager.new()
   end
