@@ -12,7 +12,7 @@ class TestRegistrar < Test::Unit::TestCase
   end
   def test_construct_hook
     @nilObject = NilClass
-    @registrar.construct_hooks(@nilObject, :test)
+    @registrar.construct_hook(@nilObject, :test)
     hooks = get_hooks()
     assert hooks[0]['trigger'].class == Rubygame::EventTrigger::YesTrigger
     assert hooks[0]['action'].class == Rubygame::EventActions::MethodAction
