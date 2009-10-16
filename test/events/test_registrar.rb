@@ -14,10 +14,10 @@ class TestRegistrar < Test::Unit::TestCase
     @nilObject = NilClass
     @registrar.construct_hook(@nilObject, :test)
     hooks = get_hooks()
-    assert hooks[0]['trigger'].class == Rubygame::EventTriggers::YesTrigger
-    assert hooks[0]['action'].class == Rubygame::EventActions::MethodAction
-    assert hooks[0]['consumes'] == false
-    assert hooks[0]['active'] == true
-    assert hooks[0]['identifier'] == :test
+    assert hooks[0][:trigger].class == Rubygame::EventTriggers::YesTrigger
+    assert hooks[0][:action].class == Rubygame::EventActions::MethodAction
+    assert hooks[0][:consumes] == false
+    assert hooks[0][:active] == true
+    assert hooks[0][:identifer] == :test
   end
 end
