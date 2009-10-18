@@ -12,7 +12,8 @@ class Registrar
     :active => true,
     :identifer => name
     }
-    @hooks << append_hook(hook)
+    @hooks << hook
+    append_hook(hook)
   end
   def destroy name
     n = 0
