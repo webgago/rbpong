@@ -14,4 +14,13 @@ class Registrar
     }
     @hooks << hook
   end
+  def destroy name
+    n = 0
+    hooks.each do |hook|
+      if hook[:identifer] == name
+        @hooks.delete_at(n)
+      end
+      n += 1
+    end
+  end
 end
