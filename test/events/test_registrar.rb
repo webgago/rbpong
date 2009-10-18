@@ -23,9 +23,9 @@ class TestRegistrar < Test::Unit::TestCase
   def test_create_destroy
     object = NilClass
     another = NilClass #Add another object to know that we're deleting or all of them
-    @registrar.construct(object, :test)
-    @registrar.construct(another, :test2)
-    hooks = get_hook()
+    @registrar.construct_hook(object, :test)
+    @registrar.construct_hook(another, :test2)
+    hooks = get_hooks()
     assert hooks.size() == 2
     @registrar.destroy(:test)
     assert hooks.size() == 1
