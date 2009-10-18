@@ -13,6 +13,7 @@ class Registrar
     :identifer => name
     }
     @hooks << hook
+    make_magic_hooks(@hooks)
   end
   def destroy name
     n = 0
