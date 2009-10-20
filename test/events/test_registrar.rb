@@ -1,6 +1,6 @@
 class TestRegistrar < Test::Unit::TestCase
   def get_hooks
-    return @registrar.instance_variable_get(:@hooks)
+    return @registrar.instance_variable_get(:@event_handler.hooks)
   end
   def setup
     @registrar = Registrar.new()
