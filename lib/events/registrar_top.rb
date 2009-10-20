@@ -1,7 +1,6 @@
 class Registrar
   include Rubygame::EventHandler::HasEventHandler
   def initialize
-    @hooks = []
   end
   def construct_hook object , name, trigger =  Rubygame::EventTriggers::YesTrigger.new() , action = Rubygame::EventActions::MethodAction.new(:handle) , consumes = false, active = true
     hook = {
@@ -12,7 +11,6 @@ class Registrar
     :active => true,
     :identifer => name
     }
-    @hooks << hook
     append_hook(hook)
   end
   def remove_hook name
