@@ -27,7 +27,7 @@ class TestRegistrar < Test::Unit::TestCase
     @registrar.construct_hook(another, :test2)
     hooks = get_hooks()
     assert hooks.size() == 2
-    @registrar.destroy(:test)
+    @registrar.remove_hook(:test)
     assert hooks.size() == 1
   end
 end
