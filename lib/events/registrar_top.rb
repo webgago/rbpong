@@ -15,13 +15,12 @@ class Registrar
     @hooks << hook
     append_hook(hook)
   end
-  def destroy name
-    n = 0
-    @hooks.each do |hook|
+  def remove_hook name
+    @event_handler.hooks.each do |hook|
       if hook[:identifer] == name
-        @hooks.delete_at(n)
+        @event_handler.remove_hook(hook)
+        break
       end
-      n += 1
     end
   end
 end
