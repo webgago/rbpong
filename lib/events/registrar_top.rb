@@ -1,5 +1,4 @@
-class Registrar
-  include Rubygame::EventHandler::HasEventHandler
+class Registrar < Rubygame::EventHandler
   def initialize
   end
   def construct_hook object , name, trigger =  Rubygame::EventTriggers::YesTrigger.new() , action = Rubygame::EventActions::MethodAction.new(:handle) , consumes = false, active = true
